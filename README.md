@@ -1,18 +1,31 @@
-# CatDog
-kaggle上的猫狗分类任务，使用的是notebook
+# CatDog Classification Using CNN
 
-一、 环境
-在此次实验中，我使用Google Colab平台，以利用GPU加速，在短时间内获得更好的训练效果。
-源代码为notebook格式，可直接在Google Colab平台打开，依次运行每一个代码框即可。
+## 1 Environment:
 
-二．程序流程
-1.	对于数据的处理。
-首先，我将测试集和验证集压缩，并上传到Google Drive，（压缩之后上传速度更快）。并解压。
-接下来，从训练集中分出一部分用作验证集，比例为训练集和验证集的比例为4：1。
-接着，定义一些数据增强操作，比如裁剪，旋转。
-最后提取标签，并将所有数据放进进dataloader。
-2.	建立模型
-模型由三个卷积层和两个全连接层组成。
-3.	训练模型
-损失函数为交叉熵，并使用Adam optimizer
-4.	最后使用测试集，得出submission.csv
+In this experiment, Google Colab is used to utilize GPU acceleration and achieve better training results in a shorter time. 
+
+The source code is in notebook format and can be directly opened on the Google Colab platform by running each code block sequentially.
+
+## 2 Program Workflow
+
+**(1) Data Processing**
+
+First, training and testing sets are compressed and uploaded to Google Drive (compression speeds up the upload process), and are then extracted.
+
+Next, separate a portion of the training set as the validation set, with the training set to validation set ratio being 4:1. 
+
+Then, define some data augmentation operations, such as cropping and rotation. 
+
+Finally, extract the labels and put all the data into a dataloader.
+
+**(2) Model Building**
+
+The model consists of three convolutional layers and two fully connected layers.
+
+**(3) Model Training**
+
+The loss function is cross-entropy, and the Adam optimizer is used.
+
+**(4) Model Testing**
+
+Finally, the submission.csv is generated for testing.
